@@ -1,0 +1,28 @@
+﻿@model IEnumerable<PAGINA_SUCURSAL_MEDICA.Models.recuperar_contrasenia>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<p>
+    Formulario enviado con exito!
+    @Html.ActionLink("Regresar", "Index", "Home")
+</p>
+@*<table class="table">
+    <tr>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.correo_electronica }) |
+            @Html.ActionLink("Details", "Details", new { id=item.correo_electronica }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.correo_electronica })
+        </td>
+    </tr>
+}
+
+</table>*@

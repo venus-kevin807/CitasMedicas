@@ -1,0 +1,64 @@
+﻿@model PAGINA_SUCURSAL_MEDICA.Models.administrador
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>administrador</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nickname_adm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nickname_adm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_adm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_adm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contrasenia_adm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contrasenia_adm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion_adm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion_adm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion_ip_adm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion_ip_adm)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

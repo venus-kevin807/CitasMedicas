@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sucursualModelStoreContainer" CdmEntityContainer="sucursualEntities">
+    <EntitySetMapping Name="administrador">
+      <EntityTypeMapping TypeName="sucursualModel.administrador">
+        <MappingFragment StoreEntitySet="administrador">
+          <ScalarProperty Name="id_adm" ColumnName="id_adm" />
+          <ScalarProperty Name="nickname_adm" ColumnName="nickname_adm" />
+          <ScalarProperty Name="nombre_adm" ColumnName="nombre_adm" />
+          <ScalarProperty Name="contrasenia_adm" ColumnName="contrasenia_adm" />
+          <ScalarProperty Name="direccion_adm" ColumnName="direccion_adm" />
+          <ScalarProperty Name="direccion_ip_adm" ColumnName="direccion_ip_adm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="citas">
+      <EntityTypeMapping TypeName="sucursualModel.citas">
+        <MappingFragment StoreEntitySet="citas">
+          <ScalarProperty Name="id_cita" ColumnName="id_cita" />
+          <ScalarProperty Name="nombre_paciente" ColumnName="nombre_paciente" />
+          <ScalarProperty Name="nombre_medico_" ColumnName="nombre_medico_" />
+          <ScalarProperty Name="fecha_cita" ColumnName="fecha_cita" />
+          <ScalarProperty Name="id_paciente" ColumnName="id_paciente" />
+          <ScalarProperty Name="id_medico" ColumnName="id_medico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creacion_funcionario">
+      <EntityTypeMapping TypeName="sucursualModel.creacion_funcionario">
+        <MappingFragment StoreEntitySet="creacion_funcionario">
+          <ScalarProperty Name="nickNameParaIngresar" ColumnName="nickNameParaIngresar" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="correElectronico" ColumnName="correElectronico" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="lugarDeResidencia" ColumnName="lugarDeResidencia" />
+          <ScalarProperty Name="sedeDondeSePrestaraLaAtencion" ColumnName="sedeDondeSePrestaraLaAtencion" />
+          <ScalarProperty Name="lugarDeNacimiento" ColumnName="lugarDeNacimiento" />
+          <ScalarProperty Name="sedeDeAtencion" ColumnName="sedeDeAtencion" />
+          <ScalarProperty Name="contrasenia" ColumnName="contrasenia" />
+          <ScalarProperty Name="fechaExppCedu" ColumnName="fechaExppCedu" />
+          <ScalarProperty Name="fechaDeNaciemiento" ColumnName="fechaDeNaciemiento" />
+          <ScalarProperty Name="numeroDeContacto" ColumnName="numeroDeContacto" />
+          <ScalarProperty Name="labor_desempenia" ColumnName="labor_desempenia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creacion_usuario">
+      <EntityTypeMapping TypeName="sucursualModel.creacion_usuario">
+        <MappingFragment StoreEntitySet="creacion_usuario">
+          <ScalarProperty Name="nickNameParaIngresar" ColumnName="nickNameParaIngresar" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="correElectronico" ColumnName="correElectronico" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="lugarDeResidencia" ColumnName="lugarDeResidencia" />
+          <ScalarProperty Name="sedeDondeSePrestaraLaAtencion" ColumnName="sedeDondeSePrestaraLaAtencion" />
+          <ScalarProperty Name="lugarDeNacimiento" ColumnName="lugarDeNacimiento" />
+          <ScalarProperty Name="sedeDeAtencion" ColumnName="sedeDeAtencion" />
+          <ScalarProperty Name="contrasenia" ColumnName="contrasenia" />
+          <ScalarProperty Name="fechaExppCedu" ColumnName="fechaExppCedu" />
+          <ScalarProperty Name="fechaDeNaciemiento" ColumnName="fechaDeNaciemiento" />
+          <ScalarProperty Name="numeroDeContacto" ColumnName="numeroDeContacto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="historial_clinico">
+      <EntityTypeMapping TypeName="sucursualModel.historial_clinico">
+        <MappingFragment StoreEntitySet="historial_clinico">
+          <ScalarProperty Name="numero_cita" ColumnName="numero_cita" />
+          <ScalarProperty Name="citas_anteriores" ColumnName="citas_anteriores" />
+          <ScalarProperty Name="medico_del_paciente" ColumnName="medico_del_paciente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ingreso_usuaio">
+      <EntityTypeMapping TypeName="sucursualModel.ingreso_usuaio">
+        <MappingFragment StoreEntitySet="ingreso_usuaio">
+          <ScalarProperty Name="nick_name_ingresar" ColumnName="nick_name_ingresar" />
+          <ScalarProperty Name="contrasenia_usuario" ColumnName="contrasenia_usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="medico">
+      <EntityTypeMapping TypeName="sucursualModel.medico">
+        <MappingFragment StoreEntitySet="medico">
+          <ScalarProperty Name="id_medico" ColumnName="id_medico" />
+          <ScalarProperty Name="nombre_medico" ColumnName="nombre_medico" />
+          <ScalarProperty Name="horario_medico" ColumnName="horario_medico" />
+          <ScalarProperty Name="labor_medico" ColumnName="labor_medico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="no_afiliados">
+      <EntityTypeMapping TypeName="sucursualModel.no_afiliados">
+        <MappingFragment StoreEntitySet="no_afiliados">
+          <ScalarProperty Name="id_no_afiliados" ColumnName="id_no_afiliados" />
+          <ScalarProperty Name="correo_electronico" ColumnName="correo_electronico" />
+          <ScalarProperty Name="contrasenia" ColumnName="contrasenia" />
+          <ScalarProperty Name="nombre_usuario" ColumnName="nombre_usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="paciente">
+      <EntityTypeMapping TypeName="sucursualModel.paciente">
+        <MappingFragment StoreEntitySet="paciente">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="nombre_usuario" ColumnName="nombre_usuario" />
+          <ScalarProperty Name="telefono_usuario" ColumnName="telefono_usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recuperar_contrasenia">
+      <EntityTypeMapping TypeName="sucursualModel.recuperar_contrasenia">
+        <MappingFragment StoreEntitySet="recuperar_contrasenia">
+          <ScalarProperty Name="correo_electronica" ColumnName="correo_electronica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

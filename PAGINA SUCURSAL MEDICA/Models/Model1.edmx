@@ -1,0 +1,634 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="sucursualModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.adm_citas' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="adm_citas">
+          <Property Name="id_adm7" Type="varchar" MaxLength="20" />
+          <Property Name="id_cita7" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.adm_crear_cuenta_funcionario' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="adm_crear_cuenta_funcionario">
+          <Property Name="id_adm3" Type="varchar" MaxLength="20" />
+          <Property Name="nickNameParaIngresar_funcionario4" Type="varchar" MaxLength="70" />
+        </EntityType>-->
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.adm_crear_cuenta_usuario' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="adm_crear_cuenta_usuario">
+          <Property Name="id_adm2" Type="varchar" MaxLength="20" />
+          <Property Name="nickNameParaIngresar8" Type="varchar" MaxLength="70" />
+        </EntityType>-->
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.adm_historial_clinico' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="adm_historial_clinico">
+          <Property Name="id_adm4" Type="varchar" MaxLength="20" />
+          <Property Name="numero_cita6" Type="varchar" MaxLength="30" />
+        </EntityType>-->
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.adm_ingreso' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="adm_ingreso">
+          <Property Name="id_adm9" Type="varchar" MaxLength="20" />
+          <Property Name="nick_name_ingresar8" Type="varchar" MaxLength="70" />
+        </EntityType>-->
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.adm_medico' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="adm_medico">
+          <Property Name="id_adm5" Type="varchar" MaxLength="20" />
+          <Property Name="id_medico6" Type="varchar" MaxLength="30" />
+        </EntityType>-->
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.adm_paciente' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="adm_paciente">
+          <Property Name="id_adm6" Type="varchar" MaxLength="20" />
+          <Property Name="id_usuario8" Type="int" />
+        </EntityType>-->
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.adm_recuperar_contrasenia' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="adm_recuperar_contrasenia">
+          <Property Name="id_adm8" Type="varchar" MaxLength="20" />
+          <Property Name="correo_electronica2" Type="varchar" MaxLength="70" />
+        </EntityType>-->
+        <EntityType Name="administrador">
+          <Key>
+            <PropertyRef Name="id_adm" />
+          </Key>
+          <Property Name="id_adm" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="nickname_adm" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="nombre_adm" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="contrasenia_adm" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="direccion_adm" Type="varchar" MaxLength="70" />
+          <Property Name="direccion_ip_adm" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.administrador_no_afiliados' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="administrador_no_afiliados">
+          <Property Name="id_no_afiliados2" Type="varchar" MaxLength="25" />
+          <Property Name="id_adm1" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+        <EntityType Name="citas">
+          <Key>
+            <PropertyRef Name="id_cita" />
+          </Key>
+          <Property Name="id_cita" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="nombre_paciente" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="nombre_medico_" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="fecha_cita" Type="date" Nullable="false" />
+          <Property Name="id_paciente" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="id_medico" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="creacion_funcionario">
+          <Key>
+            <PropertyRef Name="nickNameParaIngresar" />
+          </Key>
+          <Property Name="nickNameParaIngresar" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="cedula" Type="int" Nullable="false" />
+          <Property Name="nombreCompleto" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="correElectronico" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="direccion" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="lugarDeResidencia" Type="varchar" MaxLength="70" />
+          <Property Name="sedeDondeSePrestaraLaAtencion" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="lugarDeNacimiento" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="sedeDeAtencion" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="contrasenia" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="fechaExppCedu" Type="date" Nullable="false" />
+          <Property Name="fechaDeNaciemiento" Type="date" Nullable="false" />
+          <Property Name="numeroDeContacto" Type="int" Nullable="false" />
+          <Property Name="labor_desempenia" Type="varchar" MaxLength="70" />
+        </EntityType>
+        <EntityType Name="creacion_usuario">
+          <Key>
+            <PropertyRef Name="nickNameParaIngresar" />
+          </Key>
+          <Property Name="nickNameParaIngresar" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="cedula" Type="int" Nullable="false" />
+          <Property Name="nombreCompleto" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="correElectronico" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="direccion" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="lugarDeResidencia" Type="varchar" MaxLength="70" />
+          <Property Name="sedeDondeSePrestaraLaAtencion" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="lugarDeNacimiento" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="sedeDeAtencion" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="contrasenia" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="fechaExppCedu" Type="date" Nullable="false" />
+          <Property Name="fechaDeNaciemiento" Type="date" Nullable="false" />
+          <Property Name="numeroDeContacto" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.historial_cita' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="historial_cita">
+          <Property Name="id_cita1" Type="varchar" MaxLength="20" />
+          <Property Name="numero_cita1" Type="varchar" MaxLength="30" />
+        </EntityType>-->
+        <EntityType Name="historial_clinico">
+          <Key>
+            <PropertyRef Name="numero_cita" />
+          </Key>
+          <Property Name="numero_cita" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="citas_anteriores" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="medico_del_paciente" Type="varchar" MaxLength="70" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.historial_medico' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="historial_medico">
+          <Property Name="numero_cita2" Type="varchar" MaxLength="30" />
+          <Property Name="id_medico4" Type="varchar" MaxLength="30" />
+        </EntityType>-->
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.historial_paciente' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="historial_paciente">
+          <Property Name="numero_cita3" Type="varchar" MaxLength="30" />
+          <Property Name="id_usuario4" Type="int" />
+        </EntityType>-->
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.ingreso_crear' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="ingreso_crear">
+          <Property Name="nickNameParaIngresar2" Type="varchar" MaxLength="70" />
+          <Property Name="nick_name_ingresar2" Type="varchar" MaxLength="70" />
+        </EntityType>-->
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.ingreso_funcionario' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="ingreso_funcionario">
+          <Property Name="nickNameParaIngresar_funcionario1" Type="varchar" MaxLength="70" />
+          <Property Name="nick_name_ingresar25" Type="varchar" MaxLength="70" />
+        </EntityType>-->
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.ingreso_paciente' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="ingreso_paciente">
+          <Property Name="id_usuario1" Type="int" />
+          <Property Name="nick_name_ingresar3" Type="varchar" MaxLength="70" />
+        </EntityType>-->
+        <EntityType Name="ingreso_usuaio">
+          <Key>
+            <PropertyRef Name="nick_name_ingresar" />
+          </Key>
+          <Property Name="nick_name_ingresar" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="contrasenia_usuario" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="medico">
+          <Key>
+            <PropertyRef Name="id_medico" />
+          </Key>
+          <Property Name="id_medico" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="nombre_medico" Type="varchar" MaxLength="70" />
+          <Property Name="horario_medico" Type="varchar" MaxLength="70" />
+          <Property Name="labor_medico" Type="varchar" MaxLength="70" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.medico_cita' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="medico_cita">
+          <Property Name="id_cita4" Type="varchar" MaxLength="20" />
+          <Property Name="id_medico5" Type="varchar" MaxLength="30" />
+        </EntityType>-->
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.medico_paciente' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="medico_paciente">
+          <Property Name="id_usuario1" Type="int" />
+          <Property Name="id_medico1" Type="varchar" MaxLength="30" />
+        </EntityType>-->
+        <EntityType Name="no_afiliados">
+          <Key>
+            <PropertyRef Name="id_no_afiliados" />
+          </Key>
+          <Property Name="id_no_afiliados" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="correo_electronico" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="contrasenia" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="nombre_usuario" Type="varchar" MaxLength="70" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.no_afiliados_ingreso' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="no_afiliados_ingreso">
+          <Property Name="id_no_afiliados4" Type="varchar" MaxLength="25" />
+          <Property Name="nick_name_ingresar8" Type="varchar" MaxLength="70" />
+        </EntityType>-->
+        <EntityType Name="paciente">
+          <Key>
+            <PropertyRef Name="id_usuario" />
+          </Key>
+          <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre_usuario" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="telefono_usuario" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.paciente_cita' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="paciente_cita">
+          <Property Name="id_cita21" Type="varchar" MaxLength="20" />
+          <Property Name="id_usuario6" Type="int" />
+        </EntityType>-->
+        <EntityType Name="recuperar_contrasenia">
+          <Key>
+            <PropertyRef Name="correo_electronica" />
+          </Key>
+          <Property Name="correo_electronica" Type="varchar" MaxLength="70" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'sucursual.dbo.recuperar_usuario' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="recuperar_usuario">
+          <Property Name="correo_electronica2" Type="varchar" MaxLength="70" />
+          <Property Name="nick_name_ingresar5" Type="varchar" MaxLength="70" />
+        </EntityType>-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.ingreso_paciente', pero no se encuentra la tabla.
+        <Association Name="apodo10" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.ingreso_paciente', pero no se encuentra la tabla.
+        <Association Name="apodo11" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.administrador_no_afiliados', pero no se encuentra la tabla.
+        <Association Name="fk_adm_no_Afiliados" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.adm_crear_cuenta_funcionario', pero no se encuentra la tabla.
+        <Association Name="fk_admad113" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.adm_historial_clinico', pero no se encuentra la tabla.
+        <Association Name="fk_admad114" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.adm_medico', pero no se encuentra la tabla.
+        <Association Name="fk_admad115" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.adm_paciente', pero no se encuentra la tabla.
+        <Association Name="fk_admad116" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.adm_citas', pero no se encuentra la tabla.
+        <Association Name="fk_admad117" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.adm_recuperar_contrasenia', pero no se encuentra la tabla.
+        <Association Name="fk_admad118" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.adm_ingreso', pero no se encuentra la tabla.
+        <Association Name="fk_admad119" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.adm_crear_cuenta_usuario', pero no se encuentra la tabla.
+        <Association Name="fk_admad123" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.adm_historial_clinico', pero no se encuentra la tabla.
+        <Association Name="fk_citas123" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.ingreso_crear', pero no se encuentra la tabla.
+        <Association Name="fk_create_cuenta2" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.recuperar_usuario', pero no se encuentra la tabla.
+        <Association Name="fk_create_cuenta3" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.ingreso_crear', pero no se encuentra la tabla.
+        <Association Name="fk_create_cuenta4" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.administrador_no_afiliados', pero no se encuentra la tabla.
+        <Association Name="fk_create_cuenta5" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.adm_ingreso', pero no se encuentra la tabla.
+        <Association Name="fk_create_cuenta68" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.adm_crear_cuenta_usuario', pero no se encuentra la tabla.
+        <Association Name="fk_create_cuentaaa" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.ingreso_funcionario', pero no se encuentra la tabla.
+        <Association Name="fk_funcionario1" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.adm_crear_cuenta_funcionario', pero no se encuentra la tabla.
+        <Association Name="fk_funcionario13" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.historial_cita', pero no se encuentra la tabla.
+        <Association Name="fk_id_cita" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.medico_paciente', pero no se encuentra la tabla.
+        <Association Name="fk_id_med" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.historial_medico', pero no se encuentra la tabla.
+        <Association Name="fk_id_medico" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.medico_cita', pero no se encuentra la tabla.
+        <Association Name="fk_id_medico3" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.adm_medico', pero no se encuentra la tabla.
+        <Association Name="fk_id_medico5" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.medico_paciente', pero no se encuentra la tabla.
+        <Association Name="fk_id_user" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.ingreso_funcionario', pero no se encuentra la tabla.
+        <Association Name="fk_ingresoo1" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.no_afiliados_ingreso', pero no se encuentra la tabla.
+        <Association Name="fk_no_afin" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.no_afiliados_ingreso', pero no se encuentra la tabla.
+        <Association Name="fk_no_afin2" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.historial_paciente', pero no se encuentra la tabla.
+        <Association Name="fk_number_cit1a" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.historial_medico', pero no se encuentra la tabla.
+        <Association Name="fk_number_cita" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.historial_cita', pero no se encuentra la tabla.
+        <Association Name="fk_number_cita3" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.paciente_cita', pero no se encuentra la tabla.
+        <Association Name="fk_number_cita4" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.medico_cita', pero no se encuentra la tabla.
+        <Association Name="fk_number_cita5" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.adm_citas', pero no se encuentra la tabla.
+        <Association Name="fk_number_cita7" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.recuperar_usuario', pero no se encuentra la tabla.
+        <Association Name="fk_recuperar_usuario12" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.adm_recuperar_contrasenia', pero no se encuentra la tabla.
+        <Association Name="fk_recuperar_usuario13" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.historial_paciente', pero no se encuentra la tabla.
+        <Association Name="fk_user4" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.paciente_cita', pero no se encuentra la tabla.
+        <Association Name="fk_user5" />-->
+        <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'sucursual.dbo.adm_paciente', pero no se encuentra la tabla.
+        <Association Name="fk_user7" />-->
+        <EntityContainer Name="sucursualModelStoreContainer">
+          <EntitySet Name="administrador" EntityType="Self.administrador" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="citas" EntityType="Self.citas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="creacion_funcionario" EntityType="Self.creacion_funcionario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="creacion_usuario" EntityType="Self.creacion_usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="historial_clinico" EntityType="Self.historial_clinico" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ingreso_usuaio" EntityType="Self.ingreso_usuaio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="medico" EntityType="Self.medico" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="no_afiliados" EntityType="Self.no_afiliados" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="paciente" EntityType="Self.paciente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="recuperar_contrasenia" EntityType="Self.recuperar_contrasenia" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="sucursualModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="administrador">
+          <Key>
+            <PropertyRef Name="id_adm" />
+          </Key>
+          <Property Name="id_adm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nickname_adm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre_adm" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="contrasenia_adm" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="direccion_adm" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="direccion_ip_adm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="citas">
+          <Key>
+            <PropertyRef Name="id_cita" />
+          </Key>
+          <Property Name="id_cita" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre_paciente" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre_medico_" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha_cita" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="id_paciente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_medico" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="creacion_funcionario">
+          <Key>
+            <PropertyRef Name="nickNameParaIngresar" />
+          </Key>
+          <Property Name="nickNameParaIngresar" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cedula" Type="Int32" Nullable="false" />
+          <Property Name="nombreCompleto" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="correElectronico" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="direccion" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lugarDeResidencia" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="sedeDondeSePrestaraLaAtencion" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lugarDeNacimiento" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sedeDeAtencion" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="contrasenia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fechaExppCedu" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fechaDeNaciemiento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="numeroDeContacto" Type="Int32" Nullable="false" />
+          <Property Name="labor_desempenia" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="creacion_usuario">
+          <Key>
+            <PropertyRef Name="nickNameParaIngresar" />
+          </Key>
+          <Property Name="nickNameParaIngresar" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cedula" Type="Int32" Nullable="false" />
+          <Property Name="nombreCompleto" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="correElectronico" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="direccion" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lugarDeResidencia" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="sedeDondeSePrestaraLaAtencion" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lugarDeNacimiento" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sedeDeAtencion" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="contrasenia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fechaExppCedu" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fechaDeNaciemiento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="numeroDeContacto" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="historial_clinico">
+          <Key>
+            <PropertyRef Name="numero_cita" />
+          </Key>
+          <Property Name="numero_cita" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="citas_anteriores" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="medico_del_paciente" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ingreso_usuaio">
+          <Key>
+            <PropertyRef Name="nick_name_ingresar" />
+          </Key>
+          <Property Name="nick_name_ingresar" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="contrasenia_usuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="medico">
+          <Key>
+            <PropertyRef Name="id_medico" />
+          </Key>
+          <Property Name="id_medico" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre_medico" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="horario_medico" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="labor_medico" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="no_afiliados">
+          <Key>
+            <PropertyRef Name="id_no_afiliados" />
+          </Key>
+          <Property Name="id_no_afiliados" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="correo_electronico" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="contrasenia" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre_usuario" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="paciente">
+          <Key>
+            <PropertyRef Name="id_usuario" />
+          </Key>
+          <Property Name="id_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre_usuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="telefono_usuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="recuperar_contrasenia">
+          <Key>
+            <PropertyRef Name="correo_electronica" />
+          </Key>
+          <Property Name="correo_electronica" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="sucursualEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="administrador" EntityType="Self.administrador" />
+          <EntitySet Name="citas" EntityType="Self.citas" />
+          <EntitySet Name="creacion_funcionario" EntityType="Self.creacion_funcionario" />
+          <EntitySet Name="creacion_usuario" EntityType="Self.creacion_usuario" />
+          <EntitySet Name="historial_clinico" EntityType="Self.historial_clinico" />
+          <EntitySet Name="ingreso_usuaio" EntityType="Self.ingreso_usuaio" />
+          <EntitySet Name="medico" EntityType="Self.medico" />
+          <EntitySet Name="no_afiliados" EntityType="Self.no_afiliados" />
+          <EntitySet Name="paciente" EntityType="Self.paciente" />
+          <EntitySet Name="recuperar_contrasenia" EntityType="Self.recuperar_contrasenia" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="sucursualModelStoreContainer" CdmEntityContainer="sucursualEntities">
+          <EntitySetMapping Name="administrador">
+            <EntityTypeMapping TypeName="sucursualModel.administrador">
+              <MappingFragment StoreEntitySet="administrador">
+                <ScalarProperty Name="id_adm" ColumnName="id_adm" />
+                <ScalarProperty Name="nickname_adm" ColumnName="nickname_adm" />
+                <ScalarProperty Name="nombre_adm" ColumnName="nombre_adm" />
+                <ScalarProperty Name="contrasenia_adm" ColumnName="contrasenia_adm" />
+                <ScalarProperty Name="direccion_adm" ColumnName="direccion_adm" />
+                <ScalarProperty Name="direccion_ip_adm" ColumnName="direccion_ip_adm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="citas">
+            <EntityTypeMapping TypeName="sucursualModel.citas">
+              <MappingFragment StoreEntitySet="citas">
+                <ScalarProperty Name="id_cita" ColumnName="id_cita" />
+                <ScalarProperty Name="nombre_paciente" ColumnName="nombre_paciente" />
+                <ScalarProperty Name="nombre_medico_" ColumnName="nombre_medico_" />
+                <ScalarProperty Name="fecha_cita" ColumnName="fecha_cita" />
+                <ScalarProperty Name="id_paciente" ColumnName="id_paciente" />
+                <ScalarProperty Name="id_medico" ColumnName="id_medico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="creacion_funcionario">
+            <EntityTypeMapping TypeName="sucursualModel.creacion_funcionario">
+              <MappingFragment StoreEntitySet="creacion_funcionario">
+                <ScalarProperty Name="nickNameParaIngresar" ColumnName="nickNameParaIngresar" />
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+                <ScalarProperty Name="correElectronico" ColumnName="correElectronico" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="lugarDeResidencia" ColumnName="lugarDeResidencia" />
+                <ScalarProperty Name="sedeDondeSePrestaraLaAtencion" ColumnName="sedeDondeSePrestaraLaAtencion" />
+                <ScalarProperty Name="lugarDeNacimiento" ColumnName="lugarDeNacimiento" />
+                <ScalarProperty Name="sedeDeAtencion" ColumnName="sedeDeAtencion" />
+                <ScalarProperty Name="contrasenia" ColumnName="contrasenia" />
+                <ScalarProperty Name="fechaExppCedu" ColumnName="fechaExppCedu" />
+                <ScalarProperty Name="fechaDeNaciemiento" ColumnName="fechaDeNaciemiento" />
+                <ScalarProperty Name="numeroDeContacto" ColumnName="numeroDeContacto" />
+                <ScalarProperty Name="labor_desempenia" ColumnName="labor_desempenia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="creacion_usuario">
+            <EntityTypeMapping TypeName="sucursualModel.creacion_usuario">
+              <MappingFragment StoreEntitySet="creacion_usuario">
+                <ScalarProperty Name="nickNameParaIngresar" ColumnName="nickNameParaIngresar" />
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+                <ScalarProperty Name="correElectronico" ColumnName="correElectronico" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="lugarDeResidencia" ColumnName="lugarDeResidencia" />
+                <ScalarProperty Name="sedeDondeSePrestaraLaAtencion" ColumnName="sedeDondeSePrestaraLaAtencion" />
+                <ScalarProperty Name="lugarDeNacimiento" ColumnName="lugarDeNacimiento" />
+                <ScalarProperty Name="sedeDeAtencion" ColumnName="sedeDeAtencion" />
+                <ScalarProperty Name="contrasenia" ColumnName="contrasenia" />
+                <ScalarProperty Name="fechaExppCedu" ColumnName="fechaExppCedu" />
+                <ScalarProperty Name="fechaDeNaciemiento" ColumnName="fechaDeNaciemiento" />
+                <ScalarProperty Name="numeroDeContacto" ColumnName="numeroDeContacto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="historial_clinico">
+            <EntityTypeMapping TypeName="sucursualModel.historial_clinico">
+              <MappingFragment StoreEntitySet="historial_clinico">
+                <ScalarProperty Name="numero_cita" ColumnName="numero_cita" />
+                <ScalarProperty Name="citas_anteriores" ColumnName="citas_anteriores" />
+                <ScalarProperty Name="medico_del_paciente" ColumnName="medico_del_paciente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ingreso_usuaio">
+            <EntityTypeMapping TypeName="sucursualModel.ingreso_usuaio">
+              <MappingFragment StoreEntitySet="ingreso_usuaio">
+                <ScalarProperty Name="nick_name_ingresar" ColumnName="nick_name_ingresar" />
+                <ScalarProperty Name="contrasenia_usuario" ColumnName="contrasenia_usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="medico">
+            <EntityTypeMapping TypeName="sucursualModel.medico">
+              <MappingFragment StoreEntitySet="medico">
+                <ScalarProperty Name="id_medico" ColumnName="id_medico" />
+                <ScalarProperty Name="nombre_medico" ColumnName="nombre_medico" />
+                <ScalarProperty Name="horario_medico" ColumnName="horario_medico" />
+                <ScalarProperty Name="labor_medico" ColumnName="labor_medico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="no_afiliados">
+            <EntityTypeMapping TypeName="sucursualModel.no_afiliados">
+              <MappingFragment StoreEntitySet="no_afiliados">
+                <ScalarProperty Name="id_no_afiliados" ColumnName="id_no_afiliados" />
+                <ScalarProperty Name="correo_electronico" ColumnName="correo_electronico" />
+                <ScalarProperty Name="contrasenia" ColumnName="contrasenia" />
+                <ScalarProperty Name="nombre_usuario" ColumnName="nombre_usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="paciente">
+            <EntityTypeMapping TypeName="sucursualModel.paciente">
+              <MappingFragment StoreEntitySet="paciente">
+                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+                <ScalarProperty Name="nombre_usuario" ColumnName="nombre_usuario" />
+                <ScalarProperty Name="telefono_usuario" ColumnName="telefono_usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="recuperar_contrasenia">
+            <EntityTypeMapping TypeName="sucursualModel.recuperar_contrasenia">
+              <MappingFragment StoreEntitySet="recuperar_contrasenia">
+                <ScalarProperty Name="correo_electronica" ColumnName="correo_electronica" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

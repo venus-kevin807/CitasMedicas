@@ -1,0 +1,32 @@
+﻿@model IEnumerable<PAGINA_SUCURSAL_MEDICA.Models.ingreso_usuaio>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<p> Bienvenido! 
+    @Html.ActionLink("Ingrese información del paciente aquí","Create","pacientes")
+ 
+</p>
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.contrasenia_usuario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.contrasenia_usuario)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.nick_name_ingresar }) |
+            @Html.ActionLink("Details", "Details", new { id=item.nick_name_ingresar }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.nick_name_ingresar })
+        </td>
+    </tr>
+}
+
+</table>*@

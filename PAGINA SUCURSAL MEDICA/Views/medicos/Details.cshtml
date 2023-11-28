@@ -1,0 +1,42 @@
+﻿@model PAGINA_SUCURSAL_MEDICA.Models.medico
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>medico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_medico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_medico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.horario_medico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.horario_medico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.labor_medico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.labor_medico)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.id_medico }) |*@
+    @Html.ActionLink("Regresar", "Index")
+</p>

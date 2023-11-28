@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<main aria-labelledby="title">
+
+    <hr />
+    <h2>Agendamiento de citas</h2>
+
+
+
+    <h3>Descripcion:</h3>
+    <p>Para agendar tu cita medica tengras que llenar el siguiente @Html.ActionLink("Formulario", "Create", "citas"), serás contacto lo antes posible por nuestro personal y agendado segun tu disponibilidad </p>
+
+    <p>Para más información sige nuestras redes sociales y mantente al tanto de las novedades:</p>
+    <li><strong>Instagram:</strong>Mi_SucursalMedica24</li>
+    <li><strong>Twiter:</strong>Mi_SucursalMedica24</li>
+    <li><strong>Facebook:</strong>Mi_SucursalMedica24</li>
+    <li><strong>Nuestro canal de Whatsapp:</strong>Mi Sucursal Medica</li>
+    <hr />
+    <p>Te gustaria revisar nuestro personal medico? @Html.ActionLink("Haz click aqui", "Index", "medicos")</p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/Imagenes/SUC1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Imagenes/SUC2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Imagenes/SUC3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+</main>

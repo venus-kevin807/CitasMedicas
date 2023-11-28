@@ -1,0 +1,26 @@
+﻿@model PAGINA_SUCURSAL_MEDICA.Models.ingreso_usuaio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ingreso_usuaio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.contrasenia_usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contrasenia_usuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.nick_name_ingresar }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

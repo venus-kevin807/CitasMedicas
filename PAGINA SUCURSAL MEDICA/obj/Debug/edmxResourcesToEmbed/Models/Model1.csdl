@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sucursualModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="administrador">
+    <Key>
+      <PropertyRef Name="id_adm" />
+    </Key>
+    <Property Name="id_adm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nickname_adm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre_adm" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="contrasenia_adm" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="direccion_adm" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="direccion_ip_adm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="citas">
+    <Key>
+      <PropertyRef Name="id_cita" />
+    </Key>
+    <Property Name="id_cita" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre_paciente" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre_medico_" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fecha_cita" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="id_paciente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_medico" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="creacion_funcionario">
+    <Key>
+      <PropertyRef Name="nickNameParaIngresar" />
+    </Key>
+    <Property Name="nickNameParaIngresar" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cedula" Type="Int32" Nullable="false" />
+    <Property Name="nombreCompleto" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="correElectronico" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="direccion" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lugarDeResidencia" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="sedeDondeSePrestaraLaAtencion" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lugarDeNacimiento" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sedeDeAtencion" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="contrasenia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaExppCedu" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fechaDeNaciemiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="numeroDeContacto" Type="Int32" Nullable="false" />
+    <Property Name="labor_desempenia" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="creacion_usuario">
+    <Key>
+      <PropertyRef Name="nickNameParaIngresar" />
+    </Key>
+    <Property Name="nickNameParaIngresar" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cedula" Type="Int32" Nullable="false" />
+    <Property Name="nombreCompleto" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="correElectronico" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="direccion" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lugarDeResidencia" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="sedeDondeSePrestaraLaAtencion" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lugarDeNacimiento" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sedeDeAtencion" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="contrasenia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaExppCedu" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fechaDeNaciemiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="numeroDeContacto" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="historial_clinico">
+    <Key>
+      <PropertyRef Name="numero_cita" />
+    </Key>
+    <Property Name="numero_cita" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="citas_anteriores" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="medico_del_paciente" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ingreso_usuaio">
+    <Key>
+      <PropertyRef Name="nick_name_ingresar" />
+    </Key>
+    <Property Name="nick_name_ingresar" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="contrasenia_usuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="medico">
+    <Key>
+      <PropertyRef Name="id_medico" />
+    </Key>
+    <Property Name="id_medico" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre_medico" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="horario_medico" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="labor_medico" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="no_afiliados">
+    <Key>
+      <PropertyRef Name="id_no_afiliados" />
+    </Key>
+    <Property Name="id_no_afiliados" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="correo_electronico" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="contrasenia" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre_usuario" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="paciente">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre_usuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefono_usuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="recuperar_contrasenia">
+    <Key>
+      <PropertyRef Name="correo_electronica" />
+    </Key>
+    <Property Name="correo_electronica" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="sucursualEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="administrador" EntityType="Self.administrador" />
+    <EntitySet Name="citas" EntityType="Self.citas" />
+    <EntitySet Name="creacion_funcionario" EntityType="Self.creacion_funcionario" />
+    <EntitySet Name="creacion_usuario" EntityType="Self.creacion_usuario" />
+    <EntitySet Name="historial_clinico" EntityType="Self.historial_clinico" />
+    <EntitySet Name="ingreso_usuaio" EntityType="Self.ingreso_usuaio" />
+    <EntitySet Name="medico" EntityType="Self.medico" />
+    <EntitySet Name="no_afiliados" EntityType="Self.no_afiliados" />
+    <EntitySet Name="paciente" EntityType="Self.paciente" />
+    <EntitySet Name="recuperar_contrasenia" EntityType="Self.recuperar_contrasenia" />
+  </EntityContainer>
+</Schema>

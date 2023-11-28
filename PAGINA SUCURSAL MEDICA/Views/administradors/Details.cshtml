@@ -1,0 +1,58 @@
+﻿@model PAGINA_SUCURSAL_MEDICA.Models.administrador
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>administrador</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nickname_adm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nickname_adm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_adm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_adm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contrasenia_adm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contrasenia_adm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion_adm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion_adm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion_ip_adm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion_ip_adm)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_adm }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

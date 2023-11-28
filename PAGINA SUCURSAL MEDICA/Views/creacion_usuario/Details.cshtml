@@ -1,0 +1,114 @@
+﻿@model PAGINA_SUCURSAL_MEDICA.Models.creacion_usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>creacion_usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cedula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cedula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreCompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreCompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correElectronico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correElectronico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lugarDeResidencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lugarDeResidencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sedeDondeSePrestaraLaAtencion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sedeDondeSePrestaraLaAtencion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lugarDeNacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lugarDeNacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sedeDeAtencion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sedeDeAtencion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contrasenia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contrasenia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaExppCedu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaExppCedu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaDeNaciemiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaDeNaciemiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numeroDeContacto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numeroDeContacto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.nickNameParaIngresar }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

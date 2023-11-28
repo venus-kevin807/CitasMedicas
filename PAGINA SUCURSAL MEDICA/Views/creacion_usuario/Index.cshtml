@@ -1,0 +1,99 @@
+﻿@model IEnumerable<PAGINA_SUCURSAL_MEDICA.Models.creacion_usuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<p>
+    Usuario creado con exito!
+    @Html.ActionLink("Ingrese informacion del paciente aquí", "Create", "pacientes")
+</p>
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cedula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreCompleto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.correElectronico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lugarDeResidencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sedeDondeSePrestaraLaAtencion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lugarDeNacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sedeDeAtencion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contrasenia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaExppCedu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaDeNaciemiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numeroDeContacto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cedula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreCompleto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.correElectronico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lugarDeResidencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sedeDondeSePrestaraLaAtencion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lugarDeNacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sedeDeAtencion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contrasenia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaExppCedu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaDeNaciemiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numeroDeContacto)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.nickNameParaIngresar }) |
+            @Html.ActionLink("Details", "Details", new { id=item.nickNameParaIngresar }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.nickNameParaIngresar })
+        </td>
+    </tr>
+}
+
+</table>*@

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<PAGINA_SUCURSAL_MEDICA.Models.medico>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Nuestro personal Medico</h2>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_medico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.horario_medico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.labor_medico)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre_medico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.horario_medico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.labor_medico)
+            </td>
+            @*<td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.id_medico }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.id_medico }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.id_medico })
+                </td>*@
+        </tr>
+    }
+
+</table>
+
+@Html.ActionLink("Regresar", "Contact", "Home")

@@ -1,0 +1,43 @@
+﻿@model PAGINA_SUCURSAL_MEDICA.Models.citas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>citas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_paciente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_paciente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_medico_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_medico_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_cita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_cita)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_cita }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

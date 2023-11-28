@@ -1,0 +1,58 @@
+﻿@model IEnumerable<PAGINA_SUCURSAL_MEDICA.Models.citas>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<p>
+    Formulario enviado con exito!
+    @Html.ActionLink("Regresar", "Contact", "Home")
+</p>
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_paciente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_medico_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_cita)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_paciente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_medico)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_paciente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_medico_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_cita)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_paciente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_medico)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_cita }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_cita }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_cita })
+        </td>
+    </tr>
+}
+
+</table>*@
